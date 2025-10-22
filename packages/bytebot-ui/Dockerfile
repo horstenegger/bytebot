@@ -9,8 +9,8 @@ ENV BYTEBOT_DESKTOP_VNC_URL=${BYTEBOT_DESKTOP_VNC_URL}
 # Create app directory
 WORKDIR /app
 # Copy app source
-COPY ../shared ./shared
-COPY ./ ./bytebot-ui
+COPY shared ./shared
+COPY packages/bytebot-ui ./bytebot-ui
 WORKDIR /app/bytebot-ui
 # Install dependencies
 RUN npm install
